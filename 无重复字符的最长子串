@@ -15,3 +15,4 @@ class Solution(object):
             if current_length>=max_length:
                 max_length = current_length
         return max_length
+#感觉python容易一点
