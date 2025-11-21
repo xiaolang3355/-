@@ -1,0 +1,16 @@
+class Solution(object):
+    def convert(self, s, numRows):
+        """
+        :type s: str
+        :type numRows: int
+        :rtype: str
+        """
+        if numRows <= 1: return s
+        n = 2*numRows-2
+        s1=['']*numRows
+
+        for i ,char in enumerate(s):
+            x = i%n
+            s1[min(x,n-x)] += char
+
+        return ''.join(s1)
