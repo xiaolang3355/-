@@ -1,0 +1,13 @@
+class Solution(object):
+    def myAtoi(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        INT_MAX = 2147483647    
+        INT_MIN = -2147483648
+        s = s.lstrip()
+        num = re.compile(r'^[\+\-]?\d+')
+        num1 = num.findall(s)
+        num1 = int(*num1)
+        return max(min(num1,INT_MAX),INT_MIN)
