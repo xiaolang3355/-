@@ -13,10 +13,12 @@ class Solution(object):
             r = n-1
             while l<r:
                 tmp = nums[l]+nums[i]+nums[r]
-                result = tmp if abs(tmp-target)<abs(result-target) else result
-                if result == target:
+                 
+                if abs(tmp-target)<abs(result-target):
+                    result = tmp
+                if tmp == target:
                     return result
-                elif result > target:
+                elif tmp > target:
                     r -= 1
                 else:
                     l += 1
